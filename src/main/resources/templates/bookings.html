@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bookings</title>
+</head>
+<body>
+<h1>Bookings</h1>
+<ul>
+    <li th:each="booking : ${bookings}">
+        <span th:text="${booking.customerName}">Customer Name</span> -
+        <span th:text="${booking.hotel.name}">Hotel Name</span> -
+        <span th:text="${booking.checkIn}">Check In</span> -
+        <span th:text="${booking.checkOut}">Check Out</span>
+    </li>
+</ul>
+<a href="/bookings/add">Add Booking</a>
+</body>
+</html>
